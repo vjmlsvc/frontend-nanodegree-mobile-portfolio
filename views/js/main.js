@@ -452,7 +452,7 @@ var resizePizzas = function(size) {
    * switch with an anonymous function returning the appropriate width string
    */
   function changePizzaSizes(size) {
-    var pizzas = document.querySelectorAll(".randomPizzaContainer");
+    var pizzas = document.getElementsByClassName("randomPizzaContainer");
     var newWidth = (function(){
       switch(size) {
         case "1":
@@ -539,7 +539,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   var phase = [];
   for (var j = 0; j < 5; j++) {
     phase[j] = Math.sin((document.body.scrollTop / 1250) + j);
@@ -572,7 +572,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 48; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
